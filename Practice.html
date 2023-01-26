@@ -46,7 +46,28 @@
     // val[2].innerText = "<p>Hello Azhar</p>"
 
     // By tag Name
+
+    let value = document.createElement("div");
+    value.className = "FSJS";
+    value.style.color = "red";
+    value.style.backgroundColor = "Green";
+    value.innerHTML = "Insert a value iside the div!"
+    document.body.appendChild(value);
+
+    value.addEventListener("click", changecolor);
+    function changecolor(){
+        value.style.color ="yellow";
+        value.style.border = "1px solid black";
+        value.style.marginTop = "100px";
+    }
+
+    setTimeout(() => {
+        document.body.removeChild(changecolor());
+    }, 1000);
+
+
     // By tag
+    
     // Query Selector
 
     let h1 = document.querySelector("#js2").innerText
